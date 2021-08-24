@@ -1,7 +1,35 @@
-﻿@page "/"
+﻿@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Layouts
+@page "/"
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<SfSplitter Height="1080px" Width="100%" SeparatorSize="3"> 
+    <SplitterPanes>
+        <SplitterPane>
+            <ContentTemplate>
+                <div style="margin:20px; text-align:center">
+                    <h1>Hello, world!</h1>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+                    <div>
+                        <p>Welcome to your new app.</p> <b>Its great thanks!</b>
+                    </div>
+
+                    <SfButton>Bedre?</SfButton>
+
+                    <SfCalendar TValue="DateTime"></SfCalendar>
+                </div>
+            </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane>
+            <ContentTemplate>
+                <div style="margin:20px; text-align:center">
+                    <h1>Right pane</h1>
+                </div>
+            </ContentTemplate>
+        </SplitterPane>
+    </SplitterPanes>
+</SfSplitter>
+
+
+

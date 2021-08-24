@@ -1,17 +1,58 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <SfSidebar Width="100px" EnableGestures="false" >
+        <ChildContent>
+            @*<div style="text-align: center;" class="text-content"> Sidebar </div>*@
+            <div style="margin:20px; text-align:center">
+                <SfButton IconCss="e-icons e-home" CssClass="e-side-buttons"></SfButton>
+
+            </div>
+        </ChildContent>
+    </SfSidebar>
+
 
     <div class="main">
         <div class="top-row px-4">
             <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
         </div>
+        @*<div class="text-content" style="text-align: center;">Main content</div>*@
 
-        <div class="content px-4">
-            @Body
-        </div>
+        @Body
+        @*<div class="content px-4">
+        </div>*@
     </div>
 </div>
+
+
+<style>
+    .e-sidebar {
+        background-color: #f8f8f8;
+        color: black;
+    }
+
+    .text-content {
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+
+    .main > div {
+        padding: 0px !important;
+    }
+
+    .e-icons {
+        color: #3B3B3B;
+        font-size: 60px;
+    }
+
+    .e-home:before {
+        content: '\e901';
+        height: 50px;
+        width: 50px;
+    }
+
+    .e-side-buttons {
+        height: 50px;
+        width: 50px;
+    }
+</style>
